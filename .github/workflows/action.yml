@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-          scope: '@tobicrain'
+          scope: '@lab551'
       - run: npm install
       - run: npm run build
       - run: npm publish

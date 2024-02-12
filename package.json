@@ -1,6 +1,6 @@
 {
   "name": "pocketbase-rn",
-  "version": "0.1.28",
+  "version": "0.2.0",
   "description": "Pocketbase context provider for react native.",
   "keywords": [
     "pocketbase",
