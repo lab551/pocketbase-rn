@@ -1,4 +1,4 @@
-import * as SecureStore from 'expo-secure-store';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export class StorageService {
   static Constants = {
@@ -7,26 +7,24 @@ export class StorageService {
   };
 
   static async get(key: string): Promise<string | null> {
-    try {
-      return SecureStore.getItemAsync(key);
-    } catch (err) {
-      return null;
-    }
+    return typeof document !== 'undefined'
+      ? localStorage.getItem(key)
+      : await AsyncStorage.getItem(key);
   }
 
   static async set(key: string, value: string): Promise<void> {
-    try {
-      return SecureStore.setItemAsync(key, value);
-    } catch (err) {
-      return;
+    if (typeof document !== 'undefined') {
+      return localStorage.setItem(key, value);
+    } else {
+      return await AsyncStorage.setItem(key, value);
     }
   }
 
   static async remove(key: string): Promise<void> {
-    try {
-      return SecureStore.deleteItemAsync(key);
-    } catch (err) {
-      return;
+    if (typeof document !== 'undefined') {
+      return localStorage.removeItem(key);
+    } else {
+      return await AsyncStorage.removeItem(key);
     }
   }
 }

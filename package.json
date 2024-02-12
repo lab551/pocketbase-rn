@@ -1,6 +1,6 @@
 {
   "name": "pocketbase-rn",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Pocketbase context provider for react native.",
   "keywords": [
     "pocketbase",
@@ -71,9 +71,9 @@
     "typescript": "^5.3"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.21.0",
     "@reduxjs/toolkit": "^1.8.5",
     "eventsource": "^2.0.2",
-    "expo-secure-store": "^12.8.1",
     "pocketbase": "0.21.1",
     "react-redux": "^8.0.4",
     "redux": "^4.2.0",
