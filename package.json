@@ -62,6 +62,7 @@
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-replace": "^2.3.3",
+    "@types/eventsource": "^1.1.15",
     "@types/react": "^18.2.55",
     "cross-env": "^7.0.3",
     "react": "18.2.0",
@@ -71,6 +72,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
+    "eventsource": "^2.0.2",
     "expo-secure-store": "^12.8.1",
     "pocketbase": "0.21.1",
     "react-redux": "^8.0.4",
