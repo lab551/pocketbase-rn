@@ -1,4 +1,3 @@
-import { Collection } from 'pocketbase';
 import * as React from 'react';
 import { createContext } from 'react';
 import { useClientContext } from '../hooks/useClientContext';
