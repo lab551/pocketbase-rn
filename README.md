@@ -1,8 +1,8 @@
 # PocketBase React SDK
 
-[![Npm package version](https://badgen.net/npm/v/pocketbase-react)](https://npmjs.com/package/pocketbase-react)
+This projected was forked and modified from [tobicrain/pocketbase-react](https://github.com/tobicrain/pocketbase-react). 
 
-Unofficial React SDK (React, React Native, Expo) for interacting with the [PocketBase JS SDK](https://github.com/pocketbase/js-sdk).
+Pocketbase provider for react native. Check out [PocketBase JS SDK](https://github.com/pocketbase/js-sdk).
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -15,40 +15,22 @@ Unofficial React SDK (React, React Native, Expo) for interacting with the [Pocke
 
 ```sh
 # Using npm
-npm install pocketbase-react  --save
+npm install https://github.com/lab551/pocketbase-rn  --save
 
 #Using yarn
-yarn add pocketbase-react
+yarn add https://github.com/lab551/pocketbase-rn
 ```
 
 ```tsx
-import { Pocketbase } from 'pocketbase-react';
+import { Pocketbase } from 'pocketbase-rn';
 ```
 
----
-
-> 🔧 React Native / Expo doesn't have native `EventSource` implementation, so in order to use the realtime service you'll need to load a `EventSource` polyfill.
-> I recommend [EventSource/eventsource](https://github.com/EventSource/eventsource)
->
-> ```sh
-> # Using npm
-> npm install eventsource --save
->
-> # Using yarn
-> yarn add eventsource
-> ```
->
-> ```js
-> // EventSource.ts
-> var Source = require('event-source');
-> global.EventSource = Source;
-> ```
 
 ## Usage
 
 ```tsx
 // App.tsx
-import { Pocketbase } from 'pocketbase-react';
+import { Pocketbase } from 'pocketbase-rn';
 
 const serverURL = "YOUR_SERVER_URL"
 const collections = ['COLLECTION_NAME_01', 'COLLECTION_NAME_02']
@@ -71,7 +53,7 @@ const mobileRedirectURL = "expo://..." // for example
 ## Caveats
 
 ```tsx
-import { useAppContent, useAuth } from 'pocketbase-react';
+import { useAppContent, useAuth } from 'pocketbase-rn';
 ```
 
 ### Records
